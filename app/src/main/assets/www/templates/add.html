@@ -1,0 +1,35 @@
+<ion-view view-title="Create Contact">
+<ion-pane>
+  <ion-view>
+    <ion-content>
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="Name" ng-model="contact.name" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="LastName" ng-model="contact.lastname">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Company</span>
+          <input type="text" placeholder="Velox LLC" ng-model="contact.company">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Phone</span>
+          <input type="text" placeholder="(+992) 900123456" ng-model="contact.phone">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">E-Mail</span>
+          <input type="text" placeholder="youremail@email.tj" ng-model="contact.email">
+        </label>
+      </div>
+
+      <div class="padding">
+        <button class="button button-outline button-positive button-block" ng-click="createContact(contact)"
+          ng-disabled="contact.name==null" > Create Contact
+        </button>
+      </div>
+    </ion-content>
+  </ion-view>
+</ion-pane>

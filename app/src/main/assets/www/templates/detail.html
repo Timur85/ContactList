@@ -1,0 +1,34 @@
+<ion-view view-title="Details">
+<ion-pane>
+  <ion-view>
+    <ion-content>
+      <form ng-submit="saveContact(item)" class="list" ng-repeat="item in contacts | filter: { id: whichcontact }">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="Name" ng-model="item.name" required>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="LastName" ng-model="item.lastname">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Company</span>
+          <input type="text" placeholder="Velox LLC" ng-model="item.company">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Phone</span>
+          <input type="text" placeholder="(+992) 900123456" ng-model="item.phone">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">E-Mail</span>
+          <input type="text" placeholder="youremail@email.tj" ng-model="item.email">
+        </label>
+
+        <div class="padding">
+          <input type="submit" class="button button-outline button-positive button-block" value="Save Changes" ng-disabled="item.name == null">
+        </div>
+      </form>
+      
+    </ion-content>
+  </ion-view>
+</ion-pane>
